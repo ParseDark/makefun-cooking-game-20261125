@@ -1,35 +1,37 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Line Cook Rush</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Line Cook Rush — a tiny kitchen game</title>
+<link rel="icon" href="data:,">
 <style>
-html, body {
-  margin: 0; height: 100%;
-  background: #1b1e26;
-  color: #faf7ee;
-  font-family: system-ui, sans-serif;
-  display: flex; align-items: center; justify-content: center;
-}
-#wrap { text-align: center; }
-canvas {
-  width: min(96vw, 960px);
-  height: auto;
-  image-rendering: auto;
-  border-radius: 12px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
-  background: #2b2f3a;
-  display: block;
-}
-p.hint { opacity: 0.6; font-size: 13px; margin: 10px 0 0; }
+  html, body { margin: 0; padding: 0; background: #241a12; height: 100%; }
+  body {
+    display: flex; align-items: center; justify-content: center;
+    font-family: "Trebuchet MS", Verdana, sans-serif;
+  }
+  #wrap {
+    width: min(1280px, 100vw);
+    aspect-ratio: 16 / 9;
+    max-height: 100vh;
+    position: relative;
+  }
+  canvas {
+    width: 100%; height: 100%; display: block;
+    background: #f6ead2; border-radius: 6px;
+  }
+  #note {
+    position: absolute; left: 0; right: 0; bottom: -24px;
+    text-align: center; color: #cbb694; font-size: 12px;
+  }
 </style>
 </head>
 <body>
-<div id="wrap">
-<canvas id="game" width="960" height="600" aria-label="Line Cook Rush game"></canvas>
-<p class="hint">Mouse to act · keys 1-4 stations · Space serve · P pause · M mute · H help</p>
-</div>
-<script type="module" src="./src/main.js"></script>
+  <div id="wrap">
+    <canvas id="game" width="1280" height="720"></canvas>
+    <div id="note">Line Cook Rush — keys 1-4, Tab, Space, P, M, H. No network, no sound files: all audio is synthesized.</div>
+  </div>
+  <script type="module" src="./src/main.js"></script>
 </body>
 </html>
