@@ -1,37 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<title>Line Cook Rush — a tiny cooking game</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Line Cook Rush — a tiny kitchen game</title>
-<link rel="icon" href="data:,">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='7' fill='%23e8862e'/%3E%3C/svg%3E">
 <style>
-  html, body { margin: 0; padding: 0; background: #241a12; height: 100%; }
-  body {
-    display: flex; align-items: center; justify-content: center;
-    font-family: "Trebuchet MS", Verdana, sans-serif;
-  }
-  #wrap {
-    width: min(1280px, 100vw);
-    aspect-ratio: 16 / 9;
-    max-height: 100vh;
-    position: relative;
-  }
-  canvas {
-    width: 100%; height: 100%; display: block;
-    background: #f6ead2; border-radius: 6px;
-  }
-  #note {
-    position: absolute; left: 0; right: 0; bottom: -24px;
-    text-align: center; color: #cbb694; font-size: 12px;
-  }
+  html, body { margin: 0; padding: 0; background: #2e2118; height: 100%; }
+  body { display: flex; align-items: center; justify-content: center; }
+  #wrap { width: min(1280px, 100vw); }
+  canvas { display: block; width: 100%; height: auto; background: #f7ead0; cursor: pointer; }
+  #note { color: #cbb894; font: 13px Verdana, sans-serif; text-align: center; padding: 6px 0; }
 </style>
 </head>
 <body>
-  <div id="wrap">
-    <canvas id="game" width="1280" height="720"></canvas>
-    <div id="note">Line Cook Rush — keys 1-4, Tab, Space, P, M, H. No network, no sound files: all audio is synthesized.</div>
-  </div>
-  <script type="module" src="./src/main.js"></script>
+<div id="wrap">
+  <canvas id="game" width="1280" height="720"></canvas>
+  <div id="note">Line Cook Rush — keys 1-4 run the stations, Tab picks an order, P pauses, M mutes, H help.</div>
+</div>
+<script type="module" src="./src/main.js"></script>
 </body>
 </html>
