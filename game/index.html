@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Line Cook Rush</title>
+<style>
+html, body {
+  margin: 0; height: 100%;
+  background: #1b1e26;
+  color: #faf7ee;
+  font-family: system-ui, sans-serif;
+  display: flex; align-items: center; justify-content: center;
+}
+#wrap { text-align: center; }
+canvas {
+  width: min(96vw, 960px);
+  height: auto;
+  image-rendering: auto;
+  border-radius: 12px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+  background: #2b2f3a;
+  display: block;
+}
+p.hint { opacity: 0.6; font-size: 13px; margin: 10px 0 0; }
+</style>
+</head>
+<body>
+<div id="wrap">
+<canvas id="game" width="960" height="600" aria-label="Line Cook Rush game"></canvas>
+<p class="hint">Mouse to act · keys 1-4 stations · Space serve · P pause · M mute · H help</p>
+</div>
+<script type="module" src="./src/main.js"></script>
+</body>
+</html>
